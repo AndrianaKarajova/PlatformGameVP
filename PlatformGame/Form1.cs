@@ -33,21 +33,21 @@ namespace PlatformGame
             txtScore.Text = "Score: " + score;
             player.Top += jumpSpeed;
 
-            if(goLeft == true)
+            if (goLeft == true)
             {
                 player.Left -= playerSpeed;
-            
+
             }
-            if(goRight == true)
+            if (goRight == true)
             {
                 player.Left += playerSpeed;
             }
-            if(jumping == true && force < 0)
+            if (jumping == true && force < 0)
             {
                 jumping = false;
-            
+
             }
-            if(jumping == true)
+            if (jumping == true)
             {
                 jumpSpeed = -8;
                 force -= 1;
@@ -57,9 +57,9 @@ namespace PlatformGame
                 jumpSpeed = 10;
             }
 
-            foreach(Control x in this.Controls)
+            foreach (Control x in this.Controls)
             {
-                if(x is PictureBox)
+                if (x is PictureBox)
                 {
                     if ((string)x.Tag == "platform")
                     {
@@ -67,29 +67,107 @@ namespace PlatformGame
                         {
                             force = 8;
                             player.Top = x.Top - player.Height;
+
+                            if ((string)x.Name == "horizontalPlatform" && goLeft == false || (string)x.Name == "horizontalPlatform" && goRight == false)
+                            {
+                                player.Left -= horizontalSpeed;
+                            }
                         }
                         x.BringToFront();
                     }
+
+                    if ((string)x.Tag == "coin")
+                    {
+                        if (player.Bounds.IntersectsWith(x.Bounds) && x.Visible == true)
+                        {
+                            x.Visible = false;
+                            score++;
+                        }
+                    }
+
+                    if ((string)x.Tag == "enemy")
+                    {
+                        //dokolku igracot go dopre enemy objektot, igrata zavrsuva i se pojavuva poraka
+                        if (player.Bounds.IntersectsWith(x.Bounds))
+                        {
+                            gameTimer.Stop();
+                            isGameOver = true;
+                            txtScore.Text = "Score: " + score + Environment.NewLine + "Game over!";
+                        }
+                    }
                 }
+            }
+
+            horizontalPlatform.Left -= horizontalSpeed;
+
+            //dinamicko horizontalno dvizenje na platformata do krajot na goleminata na prozorecot 
+            if (horizontalPlatform.Left < 0 || horizontalPlatform.Left + horizontalPlatform.Width > this.ClientSize.Width)
+            {
+                horizontalSpeed = -horizontalSpeed;
+            }
+
+            verticalPlatform.Top += verticalSpeed;
+
+            //vertikalno dvizenje na plaformata od edno do drugo rastojanie
+            if (verticalPlatform.Top < 110 || verticalPlatform.Top > 375)
+            {
+                verticalSpeed = -verticalSpeed;
+            }
+
+            enemyOne.Left -= enemyOneSpeed;
+
+            //dvizenje na prviot enemy od edniot do drugiot kraj na platformata
+            if (enemyOne.Left < pictureBox5.Left || enemyOne.Left + enemyOne.Width > pictureBox5.Left + pictureBox5.Width)
+            {
+                enemyOneSpeed = -enemyOneSpeed;
+            }
+
+            enemyTwo.Left -= enemyTwoSpeed;
+
+            //dvizenje na vtoriot enemy od edniot do drugiot kraj na platformata
+            if (enemyTwo.Left < pictureBox2.Left || enemyTwo.Left + enemyTwo.Width > pictureBox2.Left + pictureBox2.Width)
+            {
+                enemyTwoSpeed = -enemyTwoSpeed;
+            }
+
+            //dokolku igracot padne nadvor od prozorecot igrata zavrsuva i se ispisuva poraka
+            if (player.Top + player.Height > this.ClientSize.Height + 50)
+            {
+                gameTimer.Stop();
+                isGameOver = true;
+                txtScore.Text = "Score: " + score + Environment.NewLine + "Game over!";
+            }
+
+            //dokolku igracot stigne do vratata i gi ima sobrano site coins, igrata zavrsuva
+            if (player.Bounds.IntersectsWith(door.Bounds) && score == 20)
+            {
+                gameTimer.Stop();
+                isGameOver = true;
+                txtScore.Text = "Score: " + score + Environment.NewLine + "Congratulations! You won!";
+            }
+            //vo sprotivno stoi porakata da gi sobere i preostanatite coins
+            else
+            {
+                txtScore.Text = "Score: " + score + Environment.NewLine + "Collect all the coins!";
             }
         }
 
         private void KeyIsDown(object sender, KeyEventArgs e)
         {
-            if(e.KeyCode == Keys.Left)
+            if (e.KeyCode == Keys.Left)
             {
                 goLeft = true;
             }
-            if(e.KeyCode == Keys.Right)
+            if (e.KeyCode == Keys.Right)
             {
                 goRight = true;
             }
-            if(e.KeyCode == Keys.Space)
+            if (e.KeyCode == Keys.Space)
             {
                 jumping = true;
             }
             //if(e.KeyCode == Keys.Space && jumping == true)
-           // {
+            // {
             //    jumping = true;
             //}
         }
@@ -108,7 +186,7 @@ namespace PlatformGame
             {
                 jumping = false;
             }
-            if(e.KeyCode==Keys.Enter && isGameOver == true)
+            if (e.KeyCode == Keys.Enter && isGameOver == true)
             {
                 RestartGame();
             }
@@ -128,7 +206,7 @@ namespace PlatformGame
             // treba parickite da se pojavat povtorno dokolku korisnikot prethodno gi ima zemeno
             foreach (Control x in this.Controls)
             {
-                if(x is PictureBox && x.Visible == false)
+                if (x is PictureBox && x.Visible == false)
                 {
                     x.Visible = true;
                 }
