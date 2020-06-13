@@ -162,6 +162,37 @@ namespace PlatformGame
             Application.Restart();
         }
 
+        private void easyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            mediumToolStripMenuItem.Checked = false;
+            hardToolStripMenuItem.Checked = false;
+            horizontalSpeed = 3;
+            verticalSpeed = 2;
+            enemyOneSpeed = 3;
+            enemyTwoSpeed = 2;
+        }
+
+        private void mediumToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            easyToolStripMenuItem.Checked = false;
+            hardToolStripMenuItem.Checked = false;
+            horizontalSpeed = 5;
+            verticalSpeed = 3;
+            enemyOneSpeed = 5;
+            enemyTwoSpeed = 3;
+        }
+
+        private void hardToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            easyToolStripMenuItem.Checked = false;
+            mediumToolStripMenuItem.Checked = false;
+            horizontalSpeed = 7;
+            verticalSpeed = 5;
+            enemyOneSpeed = 7;
+            enemyTwoSpeed = 5;
+        }
+
         private void KeyIsDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Left)
