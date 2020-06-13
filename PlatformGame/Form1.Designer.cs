@@ -67,7 +67,7 @@
             this.End_Text = new System.Windows.Forms.Label();
             this.PlayAgain_button = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.diffucultyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.difficultyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.easyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mediumToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -516,22 +516,22 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.diffucultyToolStripMenuItem});
+            this.difficultyToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(432, 24);
             this.menuStrip1.TabIndex = 29;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // diffucultyToolStripMenuItem
+            // difficultyToolStripMenuItem
             // 
-            this.diffucultyToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.difficultyToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.easyToolStripMenuItem,
             this.mediumToolStripMenuItem,
             this.hardToolStripMenuItem});
-            this.diffucultyToolStripMenuItem.Name = "diffucultyToolStripMenuItem";
-            this.diffucultyToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
-            this.diffucultyToolStripMenuItem.Text = "Diffuculty";
+            this.difficultyToolStripMenuItem.Name = "difficultyToolStripMenuItem";
+            this.difficultyToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
+            this.difficultyToolStripMenuItem.Text = "Difficulty";
             // 
             // easyToolStripMenuItem
             // 
@@ -688,7 +688,7 @@
         private System.Windows.Forms.Label End_Text;
         private System.Windows.Forms.Button PlayAgain_button;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem diffucultyToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem difficultyToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem easyToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mediumToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem hardToolStripMenuItem;

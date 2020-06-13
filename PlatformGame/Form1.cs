@@ -81,7 +81,18 @@ namespace PlatformGame
                         if (player.Bounds.IntersectsWith(x.Bounds) && x.Visible == true)
                         {
                             x.Visible = false;
-                            score++;
+                            if (easyToolStripMenuItem.Checked == true)
+                            {
+                                score += 1;
+                            }
+                            else if (mediumToolStripMenuItem.Checked == true)
+                            {
+                                score += 2;
+                            }
+                            else
+                            {
+                                score += 3;
+                            }
                         }
                     }
 
