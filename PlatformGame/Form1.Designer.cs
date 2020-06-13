@@ -239,22 +239,26 @@
             // 
             // enemyOne
             // 
-            this.enemyOne.BackColor = System.Drawing.Color.Red;
+            this.enemyOne.BackColor = System.Drawing.Color.Transparent;
+            this.enemyOne.Image = global::PlatformGame.Properties.Resources.Monster;
             this.enemyOne.Location = new System.Drawing.Point(339, 208);
             this.enemyOne.Margin = new System.Windows.Forms.Padding(2);
             this.enemyOne.Name = "enemyOne";
             this.enemyOne.Size = new System.Drawing.Size(20, 26);
+            this.enemyOne.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.enemyOne.TabIndex = 12;
             this.enemyOne.TabStop = false;
             this.enemyOne.Tag = "enemy";
             // 
             // enemyTwo
             // 
-            this.enemyTwo.BackColor = System.Drawing.Color.Red;
+            this.enemyTwo.BackColor = System.Drawing.Color.Transparent;
+            this.enemyTwo.Image = global::PlatformGame.Properties.Resources.Monster;
             this.enemyTwo.Location = new System.Drawing.Point(235, 387);
             this.enemyTwo.Margin = new System.Windows.Forms.Padding(2);
             this.enemyTwo.Name = "enemyTwo";
             this.enemyTwo.Size = new System.Drawing.Size(20, 26);
+            this.enemyTwo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.enemyTwo.TabIndex = 13;
             this.enemyTwo.TabStop = false;
             this.enemyTwo.Tag = "enemy";
@@ -537,7 +541,7 @@
             // 
             this.easyToolStripMenuItem.CheckOnClick = true;
             this.easyToolStripMenuItem.Name = "easyToolStripMenuItem";
-            this.easyToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.easyToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
             this.easyToolStripMenuItem.Text = "Easy";
             this.easyToolStripMenuItem.Click += new System.EventHandler(this.easyToolStripMenuItem_Click);
             // 
@@ -547,7 +551,7 @@
             this.mediumToolStripMenuItem.CheckOnClick = true;
             this.mediumToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.mediumToolStripMenuItem.Name = "mediumToolStripMenuItem";
-            this.mediumToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.mediumToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
             this.mediumToolStripMenuItem.Text = "Medium";
             this.mediumToolStripMenuItem.Click += new System.EventHandler(this.mediumToolStripMenuItem_Click);
             // 
@@ -555,7 +559,7 @@
             // 
             this.hardToolStripMenuItem.CheckOnClick = true;
             this.hardToolStripMenuItem.Name = "hardToolStripMenuItem";
-            this.hardToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.hardToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
             this.hardToolStripMenuItem.Text = "Hard";
             this.hardToolStripMenuItem.Click += new System.EventHandler(this.hardToolStripMenuItem_Click);
             // 
