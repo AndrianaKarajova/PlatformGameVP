@@ -64,6 +64,8 @@
             this.pictureBox29 = new System.Windows.Forms.PictureBox();
             this.pictureBox30 = new System.Windows.Forms.PictureBox();
             this.gameTimer = new System.Windows.Forms.Timer(this.components);
+            this.End_Text = new System.Windows.Forms.Label();
+            this.PlayAgain_button = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -114,7 +116,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.DarkGreen;
             this.pictureBox1.Location = new System.Drawing.Point(-6, 469);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(237, 19);
             this.pictureBox1.TabIndex = 1;
@@ -125,7 +127,7 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.DarkGreen;
             this.pictureBox2.Location = new System.Drawing.Point(218, 407);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(141, 19);
             this.pictureBox2.TabIndex = 2;
@@ -136,7 +138,7 @@
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.DarkGreen;
             this.pictureBox3.Location = new System.Drawing.Point(129, 354);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(74, 19);
             this.pictureBox3.TabIndex = 3;
@@ -147,7 +149,7 @@
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.DarkGreen;
             this.pictureBox4.Location = new System.Drawing.Point(31, 293);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(74, 19);
             this.pictureBox4.TabIndex = 4;
@@ -158,7 +160,7 @@
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.DarkGreen;
             this.pictureBox5.Location = new System.Drawing.Point(166, 231);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(197, 19);
             this.pictureBox5.TabIndex = 5;
@@ -169,7 +171,7 @@
             // 
             this.pictureBox6.BackColor = System.Drawing.Color.DarkGreen;
             this.pictureBox6.Location = new System.Drawing.Point(31, 173);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(74, 19);
             this.pictureBox6.TabIndex = 6;
@@ -180,7 +182,7 @@
             // 
             this.horizontalPlatform.BackColor = System.Drawing.Color.DarkGreen;
             this.horizontalPlatform.Location = new System.Drawing.Point(166, 84);
-            this.horizontalPlatform.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.horizontalPlatform.Margin = new System.Windows.Forms.Padding(2);
             this.horizontalPlatform.Name = "horizontalPlatform";
             this.horizontalPlatform.Size = new System.Drawing.Size(153, 19);
             this.horizontalPlatform.TabIndex = 7;
@@ -191,7 +193,7 @@
             // 
             this.pictureBox8.BackColor = System.Drawing.Color.DarkGreen;
             this.pictureBox8.Location = new System.Drawing.Point(-6, 38);
-            this.pictureBox8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(111, 19);
             this.pictureBox8.TabIndex = 8;
@@ -202,7 +204,7 @@
             // 
             this.verticalPlatform.BackColor = System.Drawing.Color.DarkGreen;
             this.verticalPlatform.Location = new System.Drawing.Point(377, 370);
-            this.verticalPlatform.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.verticalPlatform.Margin = new System.Windows.Forms.Padding(2);
             this.verticalPlatform.Name = "verticalPlatform";
             this.verticalPlatform.Size = new System.Drawing.Size(59, 19);
             this.verticalPlatform.TabIndex = 9;
@@ -213,7 +215,7 @@
             // 
             this.player.BackColor = System.Drawing.Color.DarkBlue;
             this.player.Location = new System.Drawing.Point(8, 439);
-            this.player.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.player.Margin = new System.Windows.Forms.Padding(2);
             this.player.Name = "player";
             this.player.Size = new System.Drawing.Size(20, 26);
             this.player.TabIndex = 10;
@@ -223,7 +225,7 @@
             // 
             this.door.BackColor = System.Drawing.Color.Maroon;
             this.door.Location = new System.Drawing.Point(1, 6);
-            this.door.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.door.Margin = new System.Windows.Forms.Padding(2);
             this.door.Name = "door";
             this.door.Size = new System.Drawing.Size(33, 32);
             this.door.TabIndex = 11;
@@ -233,7 +235,7 @@
             // 
             this.enemyOne.BackColor = System.Drawing.Color.Red;
             this.enemyOne.Location = new System.Drawing.Point(339, 208);
-            this.enemyOne.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.enemyOne.Margin = new System.Windows.Forms.Padding(2);
             this.enemyOne.Name = "enemyOne";
             this.enemyOne.Size = new System.Drawing.Size(20, 26);
             this.enemyOne.TabIndex = 12;
@@ -244,7 +246,7 @@
             // 
             this.enemyTwo.BackColor = System.Drawing.Color.Red;
             this.enemyTwo.Location = new System.Drawing.Point(235, 387);
-            this.enemyTwo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.enemyTwo.Margin = new System.Windows.Forms.Padding(2);
             this.enemyTwo.Name = "enemyTwo";
             this.enemyTwo.Size = new System.Drawing.Size(20, 26);
             this.enemyTwo.TabIndex = 13;
@@ -255,7 +257,7 @@
             // 
             this.pictureBox11.BackColor = System.Drawing.Color.Gold;
             this.pictureBox11.Location = new System.Drawing.Point(42, 150);
-            this.pictureBox11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox11.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox11.Name = "pictureBox11";
             this.pictureBox11.Size = new System.Drawing.Size(17, 16);
             this.pictureBox11.TabIndex = 14;
@@ -266,7 +268,7 @@
             // 
             this.pictureBox12.BackColor = System.Drawing.Color.Gold;
             this.pictureBox12.Location = new System.Drawing.Point(75, 150);
-            this.pictureBox12.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox12.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox12.Name = "pictureBox12";
             this.pictureBox12.Size = new System.Drawing.Size(17, 16);
             this.pictureBox12.TabIndex = 15;
@@ -277,7 +279,7 @@
             // 
             this.pictureBox16.BackColor = System.Drawing.Color.Gold;
             this.pictureBox16.Location = new System.Drawing.Point(175, 64);
-            this.pictureBox16.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox16.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox16.Name = "pictureBox16";
             this.pictureBox16.Size = new System.Drawing.Size(17, 16);
             this.pictureBox16.TabIndex = 14;
@@ -288,7 +290,7 @@
             // 
             this.pictureBox17.BackColor = System.Drawing.Color.Gold;
             this.pictureBox17.Location = new System.Drawing.Point(206, 64);
-            this.pictureBox17.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox17.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox17.Name = "pictureBox17";
             this.pictureBox17.Size = new System.Drawing.Size(17, 16);
             this.pictureBox17.TabIndex = 15;
@@ -299,7 +301,7 @@
             // 
             this.pictureBox18.BackColor = System.Drawing.Color.Gold;
             this.pictureBox18.Location = new System.Drawing.Point(238, 64);
-            this.pictureBox18.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox18.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox18.Name = "pictureBox18";
             this.pictureBox18.Size = new System.Drawing.Size(17, 16);
             this.pictureBox18.TabIndex = 16;
@@ -310,7 +312,7 @@
             // 
             this.pictureBox19.BackColor = System.Drawing.Color.Gold;
             this.pictureBox19.Location = new System.Drawing.Point(267, 64);
-            this.pictureBox19.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox19.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox19.Name = "pictureBox19";
             this.pictureBox19.Size = new System.Drawing.Size(17, 16);
             this.pictureBox19.TabIndex = 17;
@@ -321,7 +323,7 @@
             // 
             this.pictureBox20.BackColor = System.Drawing.Color.Gold;
             this.pictureBox20.Location = new System.Drawing.Point(299, 64);
-            this.pictureBox20.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox20.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox20.Name = "pictureBox20";
             this.pictureBox20.Size = new System.Drawing.Size(17, 16);
             this.pictureBox20.TabIndex = 18;
@@ -332,7 +334,7 @@
             // 
             this.pictureBox13.BackColor = System.Drawing.Color.Gold;
             this.pictureBox13.Location = new System.Drawing.Point(175, 208);
-            this.pictureBox13.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox13.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox13.Name = "pictureBox13";
             this.pictureBox13.Size = new System.Drawing.Size(17, 16);
             this.pictureBox13.TabIndex = 14;
@@ -343,7 +345,7 @@
             // 
             this.pictureBox14.BackColor = System.Drawing.Color.Gold;
             this.pictureBox14.Location = new System.Drawing.Point(206, 208);
-            this.pictureBox14.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox14.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox14.Name = "pictureBox14";
             this.pictureBox14.Size = new System.Drawing.Size(17, 16);
             this.pictureBox14.TabIndex = 15;
@@ -354,7 +356,7 @@
             // 
             this.pictureBox15.BackColor = System.Drawing.Color.Gold;
             this.pictureBox15.Location = new System.Drawing.Point(238, 208);
-            this.pictureBox15.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox15.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox15.Name = "pictureBox15";
             this.pictureBox15.Size = new System.Drawing.Size(17, 16);
             this.pictureBox15.TabIndex = 16;
@@ -365,7 +367,7 @@
             // 
             this.pictureBox21.BackColor = System.Drawing.Color.Gold;
             this.pictureBox21.Location = new System.Drawing.Point(267, 208);
-            this.pictureBox21.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox21.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox21.Name = "pictureBox21";
             this.pictureBox21.Size = new System.Drawing.Size(17, 16);
             this.pictureBox21.TabIndex = 17;
@@ -376,7 +378,7 @@
             // 
             this.pictureBox22.BackColor = System.Drawing.Color.Gold;
             this.pictureBox22.Location = new System.Drawing.Point(299, 208);
-            this.pictureBox22.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox22.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox22.Name = "pictureBox22";
             this.pictureBox22.Size = new System.Drawing.Size(17, 16);
             this.pictureBox22.TabIndex = 18;
@@ -387,7 +389,7 @@
             // 
             this.pictureBox23.BackColor = System.Drawing.Color.Gold;
             this.pictureBox23.Location = new System.Drawing.Point(249, 387);
-            this.pictureBox23.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox23.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox23.Name = "pictureBox23";
             this.pictureBox23.Size = new System.Drawing.Size(17, 16);
             this.pictureBox23.TabIndex = 19;
@@ -398,7 +400,7 @@
             // 
             this.pictureBox24.BackColor = System.Drawing.Color.Gold;
             this.pictureBox24.Location = new System.Drawing.Point(279, 387);
-            this.pictureBox24.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox24.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox24.Name = "pictureBox24";
             this.pictureBox24.Size = new System.Drawing.Size(17, 16);
             this.pictureBox24.TabIndex = 20;
@@ -409,7 +411,7 @@
             // 
             this.pictureBox25.BackColor = System.Drawing.Color.Gold;
             this.pictureBox25.Location = new System.Drawing.Point(309, 387);
-            this.pictureBox25.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox25.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox25.Name = "pictureBox25";
             this.pictureBox25.Size = new System.Drawing.Size(17, 16);
             this.pictureBox25.TabIndex = 21;
@@ -420,7 +422,7 @@
             // 
             this.pictureBox26.BackColor = System.Drawing.Color.Gold;
             this.pictureBox26.Location = new System.Drawing.Point(339, 387);
-            this.pictureBox26.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox26.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox26.Name = "pictureBox26";
             this.pictureBox26.Size = new System.Drawing.Size(17, 16);
             this.pictureBox26.TabIndex = 22;
@@ -431,7 +433,7 @@
             // 
             this.pictureBox27.BackColor = System.Drawing.Color.Gold;
             this.pictureBox27.Location = new System.Drawing.Point(330, 208);
-            this.pictureBox27.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox27.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox27.Name = "pictureBox27";
             this.pictureBox27.Size = new System.Drawing.Size(17, 16);
             this.pictureBox27.TabIndex = 23;
@@ -442,7 +444,7 @@
             // 
             this.pictureBox28.BackColor = System.Drawing.Color.Gold;
             this.pictureBox28.Location = new System.Drawing.Point(221, 387);
-            this.pictureBox28.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox28.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox28.Name = "pictureBox28";
             this.pictureBox28.Size = new System.Drawing.Size(17, 16);
             this.pictureBox28.TabIndex = 24;
@@ -453,7 +455,7 @@
             // 
             this.pictureBox29.BackColor = System.Drawing.Color.Gold;
             this.pictureBox29.Location = new System.Drawing.Point(42, 273);
-            this.pictureBox29.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox29.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox29.Name = "pictureBox29";
             this.pictureBox29.Size = new System.Drawing.Size(17, 16);
             this.pictureBox29.TabIndex = 25;
@@ -464,7 +466,7 @@
             // 
             this.pictureBox30.BackColor = System.Drawing.Color.Gold;
             this.pictureBox30.Location = new System.Drawing.Point(75, 273);
-            this.pictureBox30.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox30.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox30.Name = "pictureBox30";
             this.pictureBox30.Size = new System.Drawing.Size(17, 16);
             this.pictureBox30.TabIndex = 26;
@@ -477,12 +479,42 @@
             this.gameTimer.Interval = 20;
             this.gameTimer.Tick += new System.EventHandler(this.MainGameTimerEvent);
             // 
+            // End_Text
+            // 
+            this.End_Text.AutoSize = true;
+            this.End_Text.BackColor = System.Drawing.Color.Black;
+            this.End_Text.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.End_Text.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.End_Text.ForeColor = System.Drawing.Color.Red;
+            this.End_Text.Location = new System.Drawing.Point(126, 127);
+            this.End_Text.Name = "End_Text";
+            this.End_Text.Size = new System.Drawing.Size(202, 41);
+            this.End_Text.TabIndex = 27;
+            this.End_Text.Text = "Game Over";
+            this.End_Text.Visible = false;
+            // 
+            // PlayAgain_button
+            // 
+            this.PlayAgain_button.BackColor = System.Drawing.Color.Transparent;
+            this.PlayAgain_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.PlayAgain_button.ForeColor = System.Drawing.Color.Red;
+            this.PlayAgain_button.Location = new System.Drawing.Point(169, 273);
+            this.PlayAgain_button.Name = "PlayAgain_button";
+            this.PlayAgain_button.Size = new System.Drawing.Size(115, 43);
+            this.PlayAgain_button.TabIndex = 28;
+            this.PlayAgain_button.Text = "Play Again";
+            this.PlayAgain_button.UseVisualStyleBackColor = false;
+            this.PlayAgain_button.Visible = false;
+            this.PlayAgain_button.Click += new System.EventHandler(this.PlayAgain_button_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
             this.ClientSize = new System.Drawing.Size(432, 484);
+            this.Controls.Add(this.PlayAgain_button);
+            this.Controls.Add(this.End_Text);
             this.Controls.Add(this.pictureBox30);
             this.Controls.Add(this.pictureBox29);
             this.Controls.Add(this.pictureBox28);
@@ -517,7 +549,7 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtScore);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "PlatformGame";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyIsDown);
@@ -556,6 +588,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox29)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox30)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -596,6 +629,8 @@
         private System.Windows.Forms.PictureBox pictureBox29;
         private System.Windows.Forms.PictureBox pictureBox30;
         private System.Windows.Forms.Timer gameTimer;
+        private System.Windows.Forms.Label End_Text;
+        private System.Windows.Forms.Button PlayAgain_button;
     }
 }
 

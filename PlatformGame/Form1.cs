@@ -92,6 +92,8 @@ namespace PlatformGame
                         {
                             gameTimer.Stop();
                             isGameOver = true;
+                            End_Text.Visible = true;
+                            PlayAgain_button.Visible = true;
                             txtScore.Text = "Score: " + score + Environment.NewLine + "Game over!";
                         }
                     }
@@ -135,6 +137,8 @@ namespace PlatformGame
             {
                 gameTimer.Stop();
                 isGameOver = true;
+                End_Text.Visible = true;
+                PlayAgain_button.Visible = true;
                 txtScore.Text = "Score: " + score + Environment.NewLine + "Game over!";
             }
 
@@ -143,6 +147,7 @@ namespace PlatformGame
             {
                 gameTimer.Stop();
                 isGameOver = true;
+                PlayAgain_button.Visible = true;
                 txtScore.Text = "Score: " + score + Environment.NewLine + "Congratulations! You won!";
             }
             //vo sprotivno stoi porakata da gi sobere i preostanatite coins
@@ -150,6 +155,11 @@ namespace PlatformGame
             {
                 txtScore.Text = "Score: " + score + Environment.NewLine + "Collect all the coins!";
             }
+        }
+
+        private void PlayAgain_button_Click(object sender, EventArgs e)
+        {
+            Application.Restart();
         }
 
         private void KeyIsDown(object sender, KeyEventArgs e)
