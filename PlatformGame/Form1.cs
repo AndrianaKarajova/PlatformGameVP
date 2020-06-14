@@ -7,11 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
 
 namespace PlatformGame
 {
     public partial class Form1 : Form
     {
+        private SoundPlayer _soundPlayer;
+
+
         bool goLeft, goRight, jumping, isGameOver;
         int jumpSpeed;
         int force;
@@ -22,11 +26,19 @@ namespace PlatformGame
         int verticalSpeed = 3;
         int enemyOneSpeed = 5;
         int enemyTwoSpeed = 3;
+        int coinCount = 0;
+
+        public SoundPlayer SoundPlayer { get => _soundPlayer; set => _soundPlayer = value; }
 
         public Form1()
         {
             InitializeComponent();
+            SoundPlayer = new SoundPlayer("PlatformGameMusic.wav");
+            _soundPlayer.Play();
+            _soundPlayer.PlayLooping();
+            
         }
+        
 
         private void MainGameTimerEvent(object sender, EventArgs e)
         {
@@ -81,6 +93,7 @@ namespace PlatformGame
                         if (player.Bounds.IntersectsWith(x.Bounds) && x.Visible == true)
                         {
                             x.Visible = false;
+                            coinCount += 1;
                             if (easyToolStripMenuItem.Checked == true)
                             {
                                 score += 1;
@@ -154,7 +167,7 @@ namespace PlatformGame
             }
 
             //dokolku igracot stigne do vratata i gi ima sobrano site coins, igrata zavrsuva
-            if (player.Bounds.IntersectsWith(door.Bounds) && score == 20)
+            if (player.Bounds.IntersectsWith(door.Bounds) && coinCount == 20)
             {
                 gameTimer.Stop();
                 isGameOver = true;
@@ -203,6 +216,23 @@ namespace PlatformGame
             enemyOneSpeed = 7;
             enemyTwoSpeed = 5;
         }
+
+       // private void cbMusic_CheckedChanged(object sender, EventArgs e)
+       // {
+       //     if (cbMusic.Checked)
+       //     {
+                
+                
+       //         cbMusic.Text = "Stop Music";
+       //         SoundPlayer.Play();
+       //         SoundPlayer.PlayLooping();
+       //     }
+       //     else
+        //    {
+        //        cbMusic.Text = "Play Music";
+        //        SoundPlayer.Stop();
+        //    }
+        //}
 
         private void KeyIsDown(object sender, KeyEventArgs e)
         {
