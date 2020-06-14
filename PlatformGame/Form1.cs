@@ -36,6 +36,8 @@ namespace PlatformGame
             SoundPlayer = new SoundPlayer("PlatformGameMusic.wav");
             _soundPlayer.Play();
             _soundPlayer.PlayLooping();
+            timer1.Start();
+            timer1.Interval = 1000;
             
         }
         
@@ -44,6 +46,7 @@ namespace PlatformGame
         {
             txtScore.Text = "Score: " + score;
             player.Top += jumpSpeed;
+           
 
             if (goLeft == true)
             {
@@ -159,6 +162,8 @@ namespace PlatformGame
             //dokolku igracot padne nadvor od prozorecot igrata zavrsuva i se ispisuva poraka
             if (player.Top + player.Height > this.ClientSize.Height + 50)
             {
+                timer1.Stop();
+                progressBar1.Value = 0;
                 gameTimer.Stop();
                 isGameOver = true;
                 End_Text.Visible = true;
@@ -169,6 +174,8 @@ namespace PlatformGame
             //dokolku igracot stigne do vratata i gi ima sobrano site coins, igrata zavrsuva
             if (player.Bounds.IntersectsWith(door.Bounds) && coinCount == 20)
             {
+                timer1.Stop();
+                progressBar1.Value = 0;
                 gameTimer.Stop();
                 isGameOver = true;
                 PlayAgain_button.Visible = true;
@@ -217,17 +224,43 @@ namespace PlatformGame
             enemyTwoSpeed = 5;
         }
 
-       // private void cbMusic_CheckedChanged(object sender, EventArgs e)
-       // {
-       //     if (cbMusic.Checked)
-       //     {
-                
-                
-       //         cbMusic.Text = "Stop Music";
-       //         SoundPlayer.Play();
-       //         SoundPlayer.PlayLooping();
-       //     }
-       //     else
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            progressBar1.Minimum = 0;
+            progressBar1.Maximum = 100;
+           // progressBar1.Value = 100;
+
+            if (progressBar1.Value <= progressBar1.Maximum)
+            {
+                if (isGameOver != true)
+                { 
+                        progressBar1.Value = progressBar1.Value - 4;
+                }
+
+            }
+            if (progressBar1.Value == progressBar1.Minimum)
+            {
+                timer1.Stop();
+                isGameOver = true;
+                End_Text.Visible = true;
+                PlayAgain_button.Visible = true;
+                txtScore.Text = "Score: " + score + Environment.NewLine + "Game over!";
+            }
+        }
+
+
+
+        // private void cbMusic_CheckedChanged(object sender, EventArgs e)
+        // {
+        //     if (cbMusic.Checked)
+        //     {
+
+
+        //         cbMusic.Text = "Stop Music";
+        //         SoundPlayer.Play();
+        //         SoundPlayer.PlayLooping();
+        //     }
+        //     else
         //    {
         //        cbMusic.Text = "Play Music";
         //        SoundPlayer.Stop();

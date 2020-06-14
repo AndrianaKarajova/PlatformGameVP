@@ -72,6 +72,8 @@
             this.mediumToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -172,7 +174,7 @@
             // pictureBox6
             // 
             this.pictureBox6.BackColor = System.Drawing.Color.DarkGreen;
-            this.pictureBox6.Location = new System.Drawing.Point(46, 266);
+            this.pictureBox6.Location = new System.Drawing.Point(46, 281);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(111, 29);
             this.pictureBox6.TabIndex = 6;
@@ -254,7 +256,7 @@
             // pictureBox11
             // 
             this.pictureBox11.BackColor = System.Drawing.Color.Gold;
-            this.pictureBox11.Location = new System.Drawing.Point(63, 231);
+            this.pictureBox11.Location = new System.Drawing.Point(63, 241);
             this.pictureBox11.Name = "pictureBox11";
             this.pictureBox11.Size = new System.Drawing.Size(26, 25);
             this.pictureBox11.TabIndex = 14;
@@ -264,7 +266,7 @@
             // pictureBox12
             // 
             this.pictureBox12.BackColor = System.Drawing.Color.Gold;
-            this.pictureBox12.Location = new System.Drawing.Point(112, 231);
+            this.pictureBox12.Location = new System.Drawing.Point(112, 250);
             this.pictureBox12.Name = "pictureBox12";
             this.pictureBox12.Size = new System.Drawing.Size(26, 25);
             this.pictureBox12.TabIndex = 15;
@@ -464,7 +466,7 @@
             this.End_Text.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.End_Text.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.End_Text.ForeColor = System.Drawing.Color.Red;
-            this.End_Text.Location = new System.Drawing.Point(189, 195);
+            this.End_Text.Location = new System.Drawing.Point(191, 218);
             this.End_Text.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.End_Text.Name = "End_Text";
             this.End_Text.Size = new System.Drawing.Size(299, 61);
@@ -538,12 +540,26 @@
             // pictureBox7
             // 
             this.pictureBox7.BackColor = System.Drawing.Color.DarkGreen;
-            this.pictureBox7.Location = new System.Drawing.Point(254, 212);
+            this.pictureBox7.Location = new System.Drawing.Point(153, 186);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(111, 29);
+            this.pictureBox7.Size = new System.Drawing.Size(60, 29);
             this.pictureBox7.TabIndex = 30;
             this.pictureBox7.TabStop = false;
             this.pictureBox7.Tag = "platform";
+            // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(191, 9);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.progressBar1.Size = new System.Drawing.Size(215, 26);
+            this.progressBar1.TabIndex = 31;
+            this.progressBar1.Value = 100;
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Form1
             // 
@@ -551,6 +567,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
             this.ClientSize = new System.Drawing.Size(648, 745);
+            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.PlayAgain_button);
             this.Controls.Add(this.End_Text);
             this.Controls.Add(this.pictureBox30);
@@ -680,6 +697,8 @@
         private System.Windows.Forms.ToolStripMenuItem mediumToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem hardToolStripMenuItem;
         private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 
