@@ -15,7 +15,7 @@ namespace PlatformGame
     {
         private SoundPlayer _soundPlayer;
 
-
+        System.Media.SoundPlayer sound = new System.Media.SoundPlayer(PlatformGame.Properties.Resources.PlatformGameMusic);
         bool goLeft, goRight, jumping, isGameOver;
         int jumpSpeed;
         int force;
@@ -33,7 +33,7 @@ namespace PlatformGame
         public Form1()
         {
             InitializeComponent();
-            SoundPlayer = new SoundPlayer("PlatformGameMusic.wav");
+            sound.PlayLooping();
             
             timer1.Start();
             timer1.Interval = 1000;
