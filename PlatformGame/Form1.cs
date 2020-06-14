@@ -34,8 +34,7 @@ namespace PlatformGame
         {
             InitializeComponent();
             SoundPlayer = new SoundPlayer("PlatformGameMusic.wav");
-            _soundPlayer.Play();
-            _soundPlayer.PlayLooping();
+            
             timer1.Start();
             timer1.Interval = 1000;
             
