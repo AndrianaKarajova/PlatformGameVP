@@ -71,6 +71,7 @@
             this.easyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mediumToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -105,6 +106,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox29)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox30)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.SuspendLayout();
             // 
             // txtScore
@@ -533,6 +535,16 @@
             this.hardToolStripMenuItem.Text = "Hard";
             this.hardToolStripMenuItem.Click += new System.EventHandler(this.hardToolStripMenuItem_Click);
             // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackColor = System.Drawing.Color.DarkGreen;
+            this.pictureBox7.Location = new System.Drawing.Point(254, 212);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(111, 29);
+            this.pictureBox7.TabIndex = 30;
+            this.pictureBox7.TabStop = false;
+            this.pictureBox7.Tag = "platform";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -576,6 +588,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtScore);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.pictureBox7);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "PlatformGame";
@@ -616,6 +629,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox30)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -665,6 +679,7 @@
         private System.Windows.Forms.ToolStripMenuItem easyToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mediumToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem hardToolStripMenuItem;
+        private System.Windows.Forms.PictureBox pictureBox7;
     }
 }
 

@@ -62,7 +62,7 @@ namespace PlatformGame
             if (jumping == true)
             {
                 jumpSpeed = -8;
-                force -= 1;
+                force -= 2;
             }
             else
             {
