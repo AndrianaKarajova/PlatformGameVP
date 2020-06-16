@@ -28,6 +28,9 @@ namespace PlatformGame
         int enemyTwoSpeed = 3;
         int coinCount = 0;
 
+        public HighScore h;
+        string player_name;
+
         public SoundPlayer SoundPlayer { get => _soundPlayer; set => _soundPlayer = value; }
 
         public Form1()
@@ -37,7 +40,10 @@ namespace PlatformGame
             
             timer1.Start();
             timer1.Interval = 1000;
-            
+
+            h = new HighScore();
+            player_name = "";
+
         }
         
 
@@ -252,8 +258,17 @@ namespace PlatformGame
 
         private void addHighScoreToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AddHighScore form = new AddHighScore();
-            form.Show();
+
+            AddHighScore forma = new AddHighScore();
+            forma.ShowDialog();
+            player_name = forma.name;
+            if (player_name == null)
+                player_name = "Anonymous";
+            h.sort();
+            HighScores ff = new HighScores(this);
+
+            MessageBox.Show("Good job, " + player_name + "\n Your score is: " + score);
+            ff.ShowDialog();
         }
 
 

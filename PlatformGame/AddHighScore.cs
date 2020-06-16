@@ -12,6 +12,8 @@ namespace PlatformGame
 {
     public partial class AddHighScore : Form
     {
+        public string name { get; set; }
+
         public AddHighScore()
         {
             InitializeComponent();
@@ -19,9 +21,8 @@ namespace PlatformGame
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            HighScores highScores = new HighScores();
-            highScores.Show();
+            this.name = textBox1.Text;
+            this.Close();
         }
     }
 }
