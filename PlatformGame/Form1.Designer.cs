@@ -74,6 +74,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.addHighScoreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox30)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox29)).BeginInit();
@@ -114,10 +115,10 @@
             // txtScore
             // 
             this.txtScore.Font = new System.Drawing.Font("Consolas", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtScore.Location = new System.Drawing.Point(269, 6);
+            this.txtScore.Location = new System.Drawing.Point(288, 6);
             this.txtScore.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.txtScore.Name = "txtScore";
-            this.txtScore.Size = new System.Drawing.Size(167, 69);
+            this.txtScore.Size = new System.Drawing.Size(148, 69);
             this.txtScore.TabIndex = 0;
             this.txtScore.Text = "Score: 0";
             this.txtScore.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -160,7 +161,8 @@
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.difficultyToolStripMenuItem});
+            this.difficultyToolStripMenuItem,
+            this.addHighScoreToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(432, 24);
@@ -205,11 +207,11 @@
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(127, 6);
+            this.progressBar1.Location = new System.Drawing.Point(175, 6);
             this.progressBar1.Margin = new System.Windows.Forms.Padding(2);
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.progressBar1.Size = new System.Drawing.Size(143, 17);
+            this.progressBar1.Size = new System.Drawing.Size(154, 18);
             this.progressBar1.TabIndex = 31;
             this.progressBar1.Value = 100;
             // 
@@ -598,6 +600,13 @@
             this.pictureBox7.TabStop = false;
             this.pictureBox7.Tag = "platform";
             // 
+            // addHighScoreToolStripMenuItem
+            // 
+            this.addHighScoreToolStripMenuItem.Name = "addHighScoreToolStripMenuItem";
+            this.addHighScoreToolStripMenuItem.Size = new System.Drawing.Size(102, 20);
+            this.addHighScoreToolStripMenuItem.Text = "Add High Score";
+            this.addHighScoreToolStripMenuItem.Click += new System.EventHandler(this.addHighScoreToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -737,6 +746,7 @@
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.ToolStripMenuItem addHighScoreToolStripMenuItem;
     }
 }
 

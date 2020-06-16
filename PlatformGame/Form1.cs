@@ -189,7 +189,10 @@ namespace PlatformGame
 
         private void PlayAgain_button_Click(object sender, EventArgs e)
         {
-            Application.Restart();
+            this.Hide();
+            Form1 form1 = new Form1();
+            form1.Show();
+            
         }
 
         private void easyToolStripMenuItem_Click(object sender, EventArgs e)
@@ -245,6 +248,12 @@ namespace PlatformGame
                 PlayAgain_button.Visible = true;
                 txtScore.Text = "Score: " + score + Environment.NewLine + "Game over!";
             }
+        }
+
+        private void addHighScoreToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddHighScore form = new AddHighScore();
+            form.Show();
         }
 
 
