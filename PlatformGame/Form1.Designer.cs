@@ -38,6 +38,7 @@
             this.easyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mediumToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addHighScoreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pictureBox30 = new System.Windows.Forms.PictureBox();
@@ -74,7 +75,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.addHighScoreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label12 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox30)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox29)).BeginInit();
@@ -115,12 +116,12 @@
             // txtScore
             // 
             this.txtScore.Font = new System.Drawing.Font("Consolas", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtScore.Location = new System.Drawing.Point(288, 6);
+            this.txtScore.Location = new System.Drawing.Point(276, 6);
             this.txtScore.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.txtScore.Name = "txtScore";
             this.txtScore.Size = new System.Drawing.Size(148, 69);
             this.txtScore.TabIndex = 0;
-            this.txtScore.Text = "Score: 0";
+            this.txtScore.Text = "Score: ";
             this.txtScore.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // gameTimer
@@ -204,6 +205,13 @@
             this.hardToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
             this.hardToolStripMenuItem.Text = "Hard";
             this.hardToolStripMenuItem.Click += new System.EventHandler(this.hardToolStripMenuItem_Click);
+            // 
+            // addHighScoreToolStripMenuItem
+            // 
+            this.addHighScoreToolStripMenuItem.Name = "addHighScoreToolStripMenuItem";
+            this.addHighScoreToolStripMenuItem.Size = new System.Drawing.Size(102, 20);
+            this.addHighScoreToolStripMenuItem.Text = "Add High Score";
+            this.addHighScoreToolStripMenuItem.Click += new System.EventHandler(this.addHighScoreToolStripMenuItem_Click);
             // 
             // progressBar1
             // 
@@ -600,12 +608,15 @@
             this.pictureBox7.TabStop = false;
             this.pictureBox7.Tag = "platform";
             // 
-            // addHighScoreToolStripMenuItem
+            // label12
             // 
-            this.addHighScoreToolStripMenuItem.Name = "addHighScoreToolStripMenuItem";
-            this.addHighScoreToolStripMenuItem.Size = new System.Drawing.Size(102, 20);
-            this.addHighScoreToolStripMenuItem.Text = "Add High Score";
-            this.addHighScoreToolStripMenuItem.Click += new System.EventHandler(this.addHighScoreToolStripMenuItem_Click);
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold);
+            this.label12.Location = new System.Drawing.Point(406, 6);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(18, 19);
+            this.label12.TabIndex = 32;
+            this.label12.Text = "0";
             // 
             // Form1
             // 
@@ -613,6 +624,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
             this.ClientSize = new System.Drawing.Size(432, 484);
+            this.Controls.Add(this.label12);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.PlayAgain_button);
             this.Controls.Add(this.End_Text);
@@ -747,6 +759,7 @@
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.ToolStripMenuItem addHighScoreToolStripMenuItem;
+        private System.Windows.Forms.Label label12;
     }
 }
 

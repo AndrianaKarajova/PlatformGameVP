@@ -30,6 +30,7 @@ namespace PlatformGame
 
         public HighScore h;
         string player_name;
+        int ind = 0;
 
         public SoundPlayer SoundPlayer { get => _soundPlayer; set => _soundPlayer = value; }
 
@@ -49,7 +50,8 @@ namespace PlatformGame
 
         private void MainGameTimerEvent(object sender, EventArgs e)
         {
-            txtScore.Text = "Score: " + score;
+            txtScore.Text = "Score: ";
+            label12.Text = "" + score;
             player.Top += jumpSpeed;
            
 
@@ -126,7 +128,8 @@ namespace PlatformGame
                             isGameOver = true;
                             End_Text.Visible = true;
                             PlayAgain_button.Visible = true;
-                            txtScore.Text = "Score: " + score + Environment.NewLine + "Game over!";
+                            txtScore.Text = "Score: " + Environment.NewLine + "Game over!";
+                            label12.Text = "" + score;
                         }
                     }
                 }
@@ -173,7 +176,8 @@ namespace PlatformGame
                 isGameOver = true;
                 End_Text.Visible = true;
                 PlayAgain_button.Visible = true;
-                txtScore.Text = "Score: " + score + Environment.NewLine + "Game over!";
+                txtScore.Text = "Score: " + Environment.NewLine + "Game over!";
+                label12.Text = "" + score;
             }
 
             //dokolku igracot stigne do vratata i gi ima sobrano site coins, igrata zavrsuva
@@ -184,12 +188,14 @@ namespace PlatformGame
                 gameTimer.Stop();
                 isGameOver = true;
                 PlayAgain_button.Visible = true;
-                txtScore.Text = "Score: " + score + Environment.NewLine + "Congratulations! You won!";
+                txtScore.Text = "Score: " + Environment.NewLine + "Congratulations! You won!";
+                label12.Text = "" + score;
             }
             //vo sprotivno stoi porakata da gi sobere i preostanatite coins
             else
             {
-                txtScore.Text = "Score: " + score + Environment.NewLine + "Collect all the coins!";
+                txtScore.Text = "Score: "  + Environment.NewLine + "Collect all the coins!";
+                label12.Text = ""+score;
             }
         }
 
@@ -198,7 +204,7 @@ namespace PlatformGame
             this.Hide();
             Form1 form1 = new Form1();
             form1.Show();
-            
+
         }
 
         private void easyToolStripMenuItem_Click(object sender, EventArgs e)
@@ -252,7 +258,8 @@ namespace PlatformGame
                 isGameOver = true;
                 End_Text.Visible = true;
                 PlayAgain_button.Visible = true;
-                txtScore.Text = "Score: " + score + Environment.NewLine + "Game over!";
+                txtScore.Text = "Score: "  + Environment.NewLine + "Game over!";
+                label12.Text = "" + score;
             }
         }
 
@@ -264,6 +271,21 @@ namespace PlatformGame
             player_name = forma.name;
             if (player_name == null)
                 player_name = "Anonymous";
+            int x = 0;
+            int.TryParse(label12.Text, out x);
+            if (ind == 10)
+            {
+                if (h.scores[9] < x)
+                {
+                    h.scores[9] = x;
+                    h.names[9] = player_name;
+                }
+            }
+            else
+            {
+                h.names[ind] = player_name;
+                h.scores[ind++] = x;
+            }
             h.sort();
             HighScores ff = new HighScores(this);
 
@@ -337,9 +359,11 @@ namespace PlatformGame
             goLeft = false;
             goRight = false;
             isGameOver = false;
+            End_Text.Visible = false;
             score = 0;
 
-            txtScore.Text = "Score: " + score;
+            txtScore.Text = "Score: " ;
+            label12.Text = "" + score;
 
             // treba parickite da se pojavat povtorno dokolku korisnikot prethodno gi ima zemeno
             foreach (Control x in this.Controls)
