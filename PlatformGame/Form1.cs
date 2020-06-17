@@ -201,10 +201,15 @@ namespace PlatformGame
 
         private void PlayAgain_button_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Form1 form1 = new Form1();
-            form1.Show();
+            RestartGame();
+            PlayAgain_button.Visible = false;
+            PlayAgain_button.Enabled = false;
 
+            if (PlayAgain_button.Enabled == false)
+            {
+                PlayAgain_button.Enabled = true;
+            }
+            
         }
 
         private void easyToolStripMenuItem_Click(object sender, EventArgs e)
@@ -360,7 +365,17 @@ namespace PlatformGame
             goRight = false;
             isGameOver = false;
             End_Text.Visible = false;
+            easyToolStripMenuItem.Checked = false;
+            mediumToolStripMenuItem.Checked = true;
+            hardToolStripMenuItem.Checked = false;
+
             score = 0;
+            coinCount = 0;
+
+            progressBar1.Minimum = 0;
+            progressBar1.Maximum = 100;
+            progressBar1.Value = 100;
+            timer1.Start();
 
             txtScore.Text = "Score: " ;
             label12.Text = "" + score;
@@ -375,14 +390,14 @@ namespace PlatformGame
             }
 
             //treba da se namesti pozicijata na player-ot,enemies i na platforms na pocetok
-            player.Left = 12;
-            player.Top = 676;
+            player.Left = 8;
+            player.Top = 439;
 
-            enemyOne.Left = 575;
-            enemyTwo.Left = 352;
+            enemyOne.Left = 339;
+            enemyTwo.Left = 235;
 
-            horizontalPlatform.Left = 249;
-            verticalPlatform.Top = 545;
+            horizontalPlatform.Left = 166;
+            verticalPlatform.Top = 337;
 
             gameTimer.Start();
 
