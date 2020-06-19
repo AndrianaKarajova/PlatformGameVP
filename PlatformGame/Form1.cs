@@ -204,6 +204,7 @@ namespace PlatformGame
             RestartGame();
             PlayAgain_button.Visible = false;
             PlayAgain_button.Enabled = false;
+            
 
             if (PlayAgain_button.Enabled == false)
             {
@@ -330,6 +331,8 @@ namespace PlatformGame
             if (e.KeyCode == Keys.Space)
             {
                 jumping = true;
+                e.SuppressKeyPress = true;
+                
             }
             //if(e.KeyCode == Keys.Space && jumping == true)
             // {
@@ -365,9 +368,7 @@ namespace PlatformGame
             goRight = false;
             isGameOver = false;
             End_Text.Visible = false;
-            easyToolStripMenuItem.Checked = false;
-            mediumToolStripMenuItem.Checked = true;
-            hardToolStripMenuItem.Checked = false;
+            
 
             score = 0;
             coinCount = 0;
