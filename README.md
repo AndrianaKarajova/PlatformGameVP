@@ -44,5 +44,10 @@ space - скокање
 Во позадина додека играта е вклучена може да се слушне и позадинаска музика со цел да го направи корисничкото искуство поубаво
 
 5.Screenshots
-<img src="Scr/PlatformGame1.png">
+<img src="Scr/PlatformGame1.png" height="100" width="50">
+<img src="Scr/PlatformGame2.png" height="100" width="50">
+<img src="Scr/PlatformGame3.png" height="100" width="50">
+<img src="Scr/PlatformGame4.png" height="100" width="50">
+<img src="Scr/PlatformGame5.png" height="100" width="50">
+<img src="Scr/PlatformGame6.png" height="100" width="50">
 
