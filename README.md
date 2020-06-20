@@ -26,13 +26,12 @@ if (player.Bounds.IntersectsWith(door.Bounds) && coinCount == 20)
                 isGameOver = true;
                 PlayAgain_button.Visible = true;
                 txtScore.Text = "Score: " + score + Environment.NewLine + "Congratulations! You won!";
-                
-            }
-            //vo sprotivno stoi porakata da gi sobere i preostanatite coins
-            else
-            {
-                txtScore.Text = "Score: " + score + Environment.NewLine + "Collect all the coins!";
-            }
+                }
+ //vo sprotivno stoi porakata da gi sobere i preostanatite coins
+ else
+     {
+         txtScore.Text = "Score: " + score + Environment.NewLine + "Collect all the coins!";
+     }
 Оваа функција е служи за победата на играчот односно играчот победува само доколку стигне до вратата и ги собере сите парички чии вкупен број е 20. CoinCount е променлива која што првично е иницијализирана на 0 а потоа со секоја интеракција на играчот со паричките се зголемува за 1. Сето тоа се проверува во условот if и доколку е исполнето најглавно нешто што треба да се направи е да му се прикаже визуелна порака на играчот дека успешно завршил и исто така можност за играње повторно(play button) покрај се стопираат двата тајмери од кои што едниот служи за прогрес барот(timer1). Исто така променливата isGameOver се иницијализира на true бидејќи играта завршува и во овој случај завршува успешно. Во спротивно доколку играчот не стигне до вратата или не ги собере сите парички му се прикажува во горниот десен агол колку е вкупниот број на освоени парички и порака дека треба да ги собере сите.
 
 4.Упатство и контроли
